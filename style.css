@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+}
+header {
+  display: block;
+  position: sticky;
+  background-color: blue;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 0px;
+  padding: 5px;
+}
+#logotyp p {
+  display: inline;
+  font-size: 15px;
+  border: 1px solid black;
+
+  padding: 3px 5px;
+}
