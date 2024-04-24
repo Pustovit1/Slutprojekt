@@ -2,7 +2,7 @@
   margin: 0;
 }
 header {
-  display: block;
+  display: inline-flexbox;
   position: sticky;
   background-color: blue;
   border: 2px solid black;
@@ -16,4 +16,17 @@ header {
   border: 1px solid black;
 
   padding: 3px 5px;
+}
+
+.navbar button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.navbar:hover button {
+  background-color: #0056b3;
 }
