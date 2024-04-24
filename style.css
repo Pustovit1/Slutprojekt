@@ -2,20 +2,20 @@
   margin: 0;
 }
 header {
-  display: inline-flexbox;
+  display: flex;
   position: sticky;
-  background-color: blue;
+  background-color: #99ccff;
   border: 2px solid black;
   border-radius: 5px;
   margin: 0px;
   padding: 5px;
 }
-#logotyp p {
-  display: inline;
-  font-size: 15px;
-  border: 1px solid black;
 
-  padding: 3px 5px;
+.logotyp {
+  font-family: "Pacifico", cursive;
+  font-size: 36px;
+  color: rgba(5, 5, 107, 0.742);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 .navbar-buttons a {
   text-decoration: none;
