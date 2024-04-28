@@ -1,25 +1,38 @@
 * {
   margin: 0;
 }
+body {
+  position: absolute;
+  width: 100%;
+}
 header {
-  display: flex;
-  position: sticky;
+  position: fixed;
   background-color: #99ccff;
   border: 2px solid black;
   border-radius: 5px;
   margin: 0px;
   padding: 5px;
+  width: 100%;
 }
-
+.navbar-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  right: 0px;
+  margin: 15px;
+  top: 10px;
+}
 .logotyp {
   font-family: "Pacifico", cursive;
-  font-size: 36px;
+  font-size: 24px;
   color: rgba(5, 5, 107, 0.742);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  margin: 10px;
 }
 .navbar-buttons a {
   text-decoration: none;
 }
+
 .Buttons {
   padding: 10px 20px;
   background-color: #007bff;
@@ -31,4 +44,18 @@ header {
 }
 .Buttons:hover {
   background-color: #0056b3;
+}
+main {
+  background-color: #e0e0e0;
+  width: 100%;
+  margin-top: 100px;
+}
+.huvudinnehål {
+  background-color: #fff;
+  width: 90%;
+  margin-left: 3%;
+  padding: 15px;
+  border-radius: 15px;
+  border: solid #808080;
+  font-size: 48px;
 }
