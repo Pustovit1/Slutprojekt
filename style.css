@@ -64,3 +64,13 @@ main {
   border: solid #808080;
   font-size: 48px;
 }
+
+footer {
+  background-color: #99ccff;
+  color: rgba(5, 5, 107, 0.742);
+  text-align: center;
+  padding: 10px;
+  border: 1px solid black;
+  margin: 0px;
+  padding: 5px;
+}
