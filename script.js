@@ -1,10 +1,6 @@
 const navbar = document.getElementById("navbar");
 const navbarToggle = document.getElementById("navbar-toggle");
 const bookList = document.getElementById("book-list");
-const bookItem = document.createElement("div");
-const bookImage = document.createElement("img");
-const bookTitle = document.createElement("h3");
-const bookAuthor = document.createElement("p");
 const books = [
   {
     title: "Sommar boken",
@@ -51,21 +47,54 @@ navbarToggle.addEventListener("click", function () {
 });
 
 function displayBooks() {
-  bookList.innerHTML = "";
+  const bookContainer = document.getElementById("book-container");
+  const scrollButtons = document.getElementById("scroll-buttons");
+
+  bookContainer.innerHTML = "";
   books.forEach((book) => {
+    const bookItem = document.createElement("div");
     bookItem.classList.add("book");
+    const bookImage = document.createElement("img");
     bookImage.src = `images/${book.image}`;
     bookImage.alt = book.title;
-    bookItem.appendChild(bookImage);
     bookImage.addEventListener("click", function () {
       window.open(book.Link, "_blank");
     });
+    bookItem.appendChild(bookImage);
+    const bookTitle = document.createElement("h3");
     bookTitle.textContent = book.title;
     bookItem.appendChild(bookTitle);
+    const bookAuthor = document.createElement("p");
     bookAuthor.textContent = `Av ${book.author}`;
     bookItem.appendChild(bookAuthor);
-    bookList.appendChild(bookItem);
+    bookContainer.appendChild(bookItem);
   });
+
+  // Kontrollera om böckerna är längre än fönstret för att visa/hide scrollpilarna
+  if (bookContainer.scrollWidth > window.innerWidth) {
+    bookContainer.classList.add("scrollable");
+    scrollButtons.classList.add("scrollable");
+  } else {
+    bookContainer.classList.remove("scrollable");
+    scrollButtons.classList.remove("scrollable");
+  }
 }
 
+// Visa böcker när sidan laddas
 window.onload = displayBooks;
+
+// Lyssna på fönstrets storleksändringar för att uppdatera scrollpilarna
+window.addEventListener("resize", displayBooks);
+
+// Lyssna på klick på scrollpilar för att bläddra genom böcker
+document.getElementById("scroll-left").addEventListener("click", function () {
+  document
+    .getElementById("book-container")
+    .scrollBy({ left: -200, behavior: "smooth" });
+});
+
+document.getElementById("scroll-right").addEventListener("click", function () {
+  document
+    .getElementById("book-container")
+    .scrollBy({ left: 200, behavior: "smooth" });
+});
