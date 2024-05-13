@@ -20,8 +20,8 @@ const books = [
   },
   {
     title: "Jorden runt på 80 dagar",
-    author: "Jane Austen",
-    image: "Jorde_runt_på_80_dagar.jpg",
+    author: "Jueles Verne",
+    image: "Jorden_runt_på_80_dagar.jpg",
     Link: "https://www.goodreads.com/book/show/34846214-jorden-runt-p-80-dagar?ref=nav_sb_noss_l_8",
   },
   {
