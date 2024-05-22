@@ -14,14 +14,17 @@ header {
   padding: 5px;
   width: 100%;
 }
+
 .navbar {
   display: flex;
+  flex-direction: row;
   flex-wrap: nowrap;
   position: fixed;
   right: 0px;
   margin: 15px;
   top: 10px;
 }
+
 #navbar a {
   text-decoration: none;
 }
@@ -45,6 +48,9 @@ header {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  width: 120px;
+  text-align: center;
+  margin: 1px;
 }
 .Buttons:hover,
 #nabar-toggle:hover {
@@ -111,4 +117,104 @@ footer {
 .book img:hover {
   max-width: 500px;
   height: 300px;
+}
+.form-container,
+.table-container {
+  width: 90%;
+  margin: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+.table-container {
+  width: 90%;
+  margin: 20px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+thead {
+  background-color: #333;
+  color: #fff;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Gör tabellen responsiv */
+@media screen and (max-width: 600px) {
+  thead {
+    display: none;
+  }
+
+  tbody td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  tbody td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+
+  tbody td {
+    padding: 10px;
+    text-align: right;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  tbody tr {
+    margin-bottom: 15px;
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
 }

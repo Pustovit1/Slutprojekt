@@ -28,13 +28,71 @@
       </nav>
     </header>
     <main>
-      <forms>
-        <input type="Name" />
-        <input type="Lastname" />
-        <input type="Epost" />
-        <input type="Klass" />
-      </forms>
+      <div class="huvudinnehål">
+        <h2>Om du vill bli medlem hos oss fyll i förmuläret nedan</h2>
+        <div class="form-container">
+          <form id="userForm">
+            <label for="firstName">Förnamn:</label>
+            <input type="text" id="firstName" name="firstName" required />
+
+            <label for="lastName">Efternamn:</label>
+            <input type="text" id="lastName" name="lastName" required />
+
+            <label for="class">Klass:</label>
+            <input type="text" id="class" name="class" required />
+
+            <label for="email">Gmail:</label>
+            <input type="email" id="email" name="email" required />
+
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+        <div class="table-container">
+          <table id="userTable">
+            <thead>
+              <tr>
+                <th>Förnamn</th>
+                <th>Efternamn</th>
+                <th>Klass</th>
+                <th>Email</th>
+                <th>Roll</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Vidar</td>
+                <td>Toller</td>
+                <td>TE21B</td>
+                <td>vidar.toller@skola.taby.se</td>
+                <td>Ordförande 2023-2024</td>
+              </tr>
+              <tr>
+                <td>Taras</td>
+                <td>Pustovit</td>
+                <td>TE22A</td>
+                <td>taras.pustovit@skola.taby.se</td>
+                <td>Ordförande 2024-2025</td>
+              </tr>
+              <tr>
+                <td>Elis</td>
+                <td>Bergman</td>
+                <td>NA23A</td>
+                <td>elis.bergman@skola.taby.se</td>
+                <td>Sekreterare 2024-2025</td>
+              </tr>
+              <tr>
+                <td>Lovisa</td>
+                <td>Fogelberg</td>
+                <td>NA22B</td>
+                <td>lovisa.fogelberg@skola.taby.se</td>
+                <td>Medlem</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </main>
     <footer><p>&copy; 2024 ÅvasBokklubb</p></footer>
   </body>
+  <script src="script.js"></script>
 </html>
