@@ -58,15 +58,10 @@ const books = [
   },
 ];
 
-window.addEventListener("load", function () {
-  if (window.innerWidth <= 800) {
-    navbar.style.display = "none";
-    navbarToggle.style.display = "flex";
-  } else {
-    navbar.style.display = "flex";
-    navbarToggle.style.display = "none";
-    navbar.style.right = "0px";
-  }
+window.addEventListener("onclick", function () {
+  navbar.style.display = "flex";
+  navbarToggle.style.display = "none";
+  navbar.style.right = "0px";
 });
 
 navbarToggle.addEventListener("click", function () {
@@ -136,9 +131,9 @@ if (scrollRight) {
   });
 }
 
-document
-  .getElementById("userForm")
-  .addEventListener("submit", function (event) {
+const userForm = document.getElementById("userForm");
+if (userForm) {
+  userForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
     const firstName = document.getElementById("firstName").value;
@@ -165,3 +160,4 @@ document
     cell5.textContent = "Medlem";
     document.getElementById("userForm").reset();
   });
+}
