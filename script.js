@@ -58,17 +58,26 @@ const books = [
   },
 ];
 
-window.addEventListener("onclick", function () {
-  navbar.style.display = "flex";
-  navbarToggle.style.display = "none";
-  navbar.style.right = "0px";
-});
+function navbarResize() {
+  if (window.innerWidth <= 800) {
+    navbar.style.display = "none";
+    navbarToggle.style.display = "flex";
+  } else {
+    navbar.style.display = "flex";
+    navbarToggle.style.display = "none";
+    navbar.style.right = "0px";
+  }
+}
+// Funktion som minskar navbar till en knapp när skärm storlekt är mindre än 800px (både när sidan laddas och om man byterstorlek på sida)
+window.addEventListener("resize", navbarResize);
+window.addEventListener("load", navbarResize);
 
 navbarToggle.addEventListener("click", function () {
   if (navbar.style.display === "none") {
     navbar.style.display = "flex";
-    navbar.style.right = "120px";
+    navbar.style.right = "110px";
     navbar.style.flexDirection = "column";
+    navbarToggle.style.display = "flex";
   } else {
     navbar.style.display = "none";
     navbar.style.flexDirection = "row";
