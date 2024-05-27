@@ -66,6 +66,7 @@ function navbarResize() {
     navbar.style.display = "flex";
     navbarToggle.style.display = "none";
     navbar.style.right = "0px";
+    navbar.style.flexDirection = "row";
   }
 }
 // Funktion som minskar navbar till en knapp när skärm storlekt är mindre än 800px (både när sidan laddas och om man byterstorlek på sida)
@@ -169,4 +170,27 @@ if (userForm) {
     cell5.textContent = "Medlem";
     document.getElementById("userForm").reset();
   });
+}
+const contactForm = document.getElementById("contact-form");
+if (contactForm) {
+  contactForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    if (name === "" || email === "" || message === "") {
+      displayMessage("Alla fält är obligatoriska", "error");
+    } else {
+      displayMessage("Tack för ditt meddelande!", "success");
+    }
+    document.getElementById("contact-form").reset();
+  });
+
+  function displayMessage(message, type) {
+    const formMessage = document.getElementById("form-message");
+    formMessage.textContent = message;
+    formMessage.className = type;
+  }
 }
