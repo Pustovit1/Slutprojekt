@@ -59,7 +59,7 @@ const books = [
 ];
 
 function navbarResize() {
-  if (window.innerWidth <= 800) {
+  if (window.innerWidth <= 820) {
     navbar.style.display = "none";
     navbarToggle.style.display = "flex";
   } else {
@@ -97,6 +97,7 @@ function displayBooks() {
     bookItem.classList.add("book");
     const bookImage = document.createElement("img");
     bookImage.src = `images/${book.image}`;
+    bookImage.loading = "lazy";
     bookImage.alt = book.title;
     bookImage.addEventListener("click", function () {
       window.open(book.Link, "_blank");
