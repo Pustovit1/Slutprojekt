@@ -195,3 +195,17 @@ if (contactForm) {
     formMessage.className = type;
   }
 }
+const map = document.getElementById("map");
+if (map) {
+  function initMap() {
+    var location = { lat: 59.439911, lng: 18.0624346 };
+    var map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 14,
+      center: location,
+    });
+    var marker = new google.maps.Marker({
+      position: location,
+      map: map,
+    });
+  }
+}
