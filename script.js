@@ -10,7 +10,7 @@ const books = [
   },
   {
     title: "Farenheit451",
-    author: "Jane Austen",
+    author: "Rey Bredberi",
     image: "Farenheit_451.jpg",
     Link: "https://www.goodreads.com/book/show/56302573-farenheit-451?ref=nav_sb_noss_l_5",
   },
