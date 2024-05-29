@@ -13,13 +13,14 @@ body {
   position: absolute;
   width: 100%;
 }
+
 header {
   position: fixed;
   background-color: #99ccff;
   border: 2px solid black;
   border-radius: 5px;
   margin: 0px;
-  padding: 5px;
+  padding: 6px;
   width: 100%;
   max-height: 15vh;
   z-index: 1;
@@ -208,8 +209,49 @@ input {
   border: 1px solid #ddd;
   border-radius: 5px;
 }
-#gruppbild {
-  max-height: 30vh;
+.OmOss {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+}
+.gruppbild {
+  width: 90%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+.gruppbild:hover {
+  transform: scale(1.05);
+}
+.OmOss h1 {
+  font-size: 2.5em;
+  color: #0056b3;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.OmOss h2 {
+  font-size: 2em;
+  color: #0056b3;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.OmOss h3 {
+  font-size: 1.75em;
+  color: #0056b3;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.OmOss p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  line-height: 1.8;
 }
 
 table {
@@ -334,6 +376,21 @@ p {
     border-radius: 0;
   }
 
+  .OmOss h1 {
+    font-size: 2em;
+  }
+
+  .OmOss h2 {
+    font-size: 1.75em;
+  }
+
+  .OmOss h3 {
+    font-size: 1.5em;
+  }
+
+  .OmOss p {
+    font-size: 1em;
+  }
   .book img {
     max-width: 80px;
     height: 80px;

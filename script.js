@@ -120,9 +120,7 @@ function displayBooks() {
     scrollButtons.classList.remove("scrollable");
   }
 }
-
 window.onload = displayBooks;
-
 window.addEventListener("resize", displayBooks);
 
 let scrollLeft = document.getElementById("scroll-left");
@@ -185,14 +183,19 @@ if (contactForm) {
       displayMessage("Alla fält är obligatoriska", "error");
     } else {
       displayMessage("Tack för ditt meddelande!", "success");
+      document.getElementById("contact-form").reset();
     }
-    document.getElementById("contact-form").reset();
   });
 
   function displayMessage(message, type) {
     const formMessage = document.getElementById("form-message");
     formMessage.textContent = message;
     formMessage.className = type;
+    if (formMessage.className === "error") {
+      formMessage.style.color = "red";
+    } else {
+      formMessage.style.color = "green";
+    }
   }
 }
 const map = document.getElementById("map");
