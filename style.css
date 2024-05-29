@@ -5,9 +5,8 @@
 
 .montserrat-font {
   font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 100;
-  font-style: bold;
+  font-style: italic;
 }
 body {
   position: absolute;
