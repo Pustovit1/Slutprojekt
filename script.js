@@ -76,7 +76,8 @@ window.addEventListener("load", navbarResize);
 navbarToggle.addEventListener("click", function () {
   if (navbar.style.display === "none") {
     navbar.style.display = "flex";
-    navbar.style.right = "110px";
+    navbar.style.right = "125px";
+    navbar.style.top = "5px";
     navbar.style.flexDirection = "column";
     navbarToggle.style.display = "flex";
   } else {

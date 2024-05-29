@@ -25,7 +25,7 @@
       <nav id="navbar" class="navbar">
         <a href="index.html"><button class="Buttons">Hemskärm</button></a>
         <a href="OmOss.html"><button class="Buttons">Om oss</button></a>
-        <a href="kontakt.html"><button class="Buttons">Kontakta oss</button></a>
+        <a href="kontakt.html"><button class="Buttons">Kontakt</button></a>
         <a href="Members.html"><button class="Buttons">Medlemar</button></a>
         <a href="login.html"><button class="Buttons">Logga in</button></a>
       </nav>
@@ -38,15 +38,17 @@
             <p>Fyll i formuläret nedan för att kontakta oss:</p>
             <form id="contact-form">
               <div class="form-group">
-                <label for="name">Namn</label>
+                <label for="name">Namn<span class="stjarna">*</span></label>
                 <input type="text" id="name" name="name" />
               </div>
               <div class="form-group">
-                <label for="email">E-post</label>
+                <label for="email">E-post<span class="stjarna">*</span></label>
                 <input type="email" id="email" name="email" />
               </div>
               <div class="form-group">
-                <label for="message">Meddelande</label>
+                <label for="message"
+                  >Meddelande<span class="stjarna">*</span></label
+                >
                 <textarea id="message" name="message" rows="5"></textarea>
               </div>
               <button type="submit">Skicka</button>
